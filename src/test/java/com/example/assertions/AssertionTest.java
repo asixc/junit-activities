@@ -2,7 +2,6 @@ package com.example.assertions;
 
 import com.example.demo.service.SmartPhoneService;
 import com.example.demo.service.SmartPhoneServiceImpl;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
