@@ -1,4 +1,4 @@
-package com.example.DisplayDemo;
+package com.example.displaydemo;
 
 import com.example.demo.domain.SmartPhone;
 import com.example.demo.service.SmartPhoneService;
