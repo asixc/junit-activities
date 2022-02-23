@@ -54,11 +54,11 @@ public class SmartPhoneServiceImpl implements SmartPhoneService{
     }
 
     @Override
-    public SmartPhone findOne(Long id) {
+    public Optional<SmartPhone> findOne(Long id) {
     	if (id == null) {
 			throw new IllegalArgumentException("El ID no puede ser nulo !");
 		}
-        return smartphones.get(id);
+        return Optional.of(smartphones.get(id));
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.example.demo.service;
 import com.example.demo.domain.SmartPhone;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface SmartPhoneService {
 
@@ -17,7 +18,7 @@ public interface SmartPhoneService {
      */
     List<SmartPhone> findAll();
 
-    SmartPhone findOne(Long id);
+    Optional<SmartPhone> findOne(Long id);
     
     // Filtros
      List<SmartPhone> findByWifi(Boolean wifi);
