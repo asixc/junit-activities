@@ -9,22 +9,21 @@ public class AssumptionTests {
 
     @Test
     void test1() {
-        var envs = System.getenv();
-        final String jdk = System.getenv("java.home");
-        assumeTrue(jdk.contains("jdk-17"));
-
-        System.out.println("Test1 assumpt"); // No se ejcuta si no se cumple el assume
-
+        String jdk = System.getenv("JAVA_HOME");
+        assumeTrue(jdk.contains("jdk-16"));
+        System.out.println("test1 asserts"); // no se ejecuta si no se cumple el assume
     }
 
     @Test
     void test2() {
-        var envs = System.getenv();
-        final String jdk = System.getenv("java.home");
+        String jdk = System.getenv("JAVA_HOME");
+
         assumingThat(jdk.contains("jdk-16"),
-                () -> System.out.println("Se cumple")); //Si no se cumple no pintará nada es un if encapsulado
+                () -> System.out.println("assume")); // si se cumple no lo ejecuta pero sigue adelante
 
-        System.out.println("Test1 assumpt"); // Se ejecutará siempre
+        assumingThat(jdk.contains("jdk-17"),
+                () -> System.out.println("jdk-17 correcto")); // si se cumple
 
+        System.out.println("test2 asserts"); // si se ejecuta independientemente de si se cumple el assume
     }
 }

@@ -3,6 +3,12 @@ package com.example.conditional;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.*;
 
+
+/*
+org.junit.jupiter.api.condition proporciona anotaciones para ejecutar los test condicionalmente en base a:
+JRE, OS, variables entorno, propiedades de sistema
+
+ */
 public class ConditionalTest {
 
     @Test
@@ -67,6 +73,9 @@ public class ConditionalTest {
         System.out.println("Custom conditional test is executed");
     }
 
+    /*
+    Utilizamos nuestras propias condiciones cuando no nos alcanza con las que hay por defecto: JRE, OS, variables entorno, propiedades de sistema
+     */
     private boolean isEncryptionSupported() {
         return true;
     }

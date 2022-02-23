@@ -1,6 +1,5 @@
 package com.example.exceptions;
 
-import com.example.demo.domain.SmartDevice;
 import com.example.demo.domain.SmartPhone;
 import com.example.demo.service.SmartPhoneService;
 import com.example.demo.service.SmartPhoneServiceImpl;
