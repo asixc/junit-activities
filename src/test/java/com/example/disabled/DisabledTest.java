@@ -1,2 +1,4 @@
-package com.example.disabled;public class DisabledTest {
+package com.example.disabled;
+
+public class DisabledTest {
 }
